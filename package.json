@@ -1,0 +1,26 @@
+{
+  "name": "pick-a-book",
+  "version": "0.0.1",
+  "description": "Pick a Book Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maka156/pick-a-book.git"
+  },
+  "author": "Maria Canache",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maka156/pick-a-book/issues"
+  },
+  "homepage": "https://github.com/maka156/pick-a-book#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.11",
+    "multer": "^1.4.1",
+    "nodemon": "^1.18.6"
+  }
+}
