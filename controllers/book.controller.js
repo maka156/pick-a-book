@@ -1,9 +1,12 @@
+const helper = require('../helper.js');
 const Book = require('../models/book.model.js')
 
 exports.books = (req, res, next) => {
     Book.find({}, (err, books) => {
         if (err) return next(err);
-        res.send(books);
+
+        let response = helper.formatResponse(req, books)
+        res.send(response)
     })
 }
 
@@ -34,7 +37,14 @@ exports.book_create = (req, res, next) => {
 
         book.save(err => {
             if (err) return next(err);
-            res.send('Book Created successfully')
+
+            console.log("Book saved")
+ 
+            let data = []
+            data.push(book)
+
+            let response = helper.formatResponse(req, data)
+            res.send(response)
         })
 
     }
