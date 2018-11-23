@@ -1,4 +1,3 @@
-
 const express = require('express');
 const router = express.Router();
 const upload = require('../imgHandler');
@@ -25,6 +24,5 @@ router.put('/:id/update', upload.single('book'),book_controller.book_update);
  * DELETE requests
  */
 router.delete('/:id/delete', book_controller.book_delete);
-
 
 module.exports = router;
