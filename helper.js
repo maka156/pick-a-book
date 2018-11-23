@@ -4,6 +4,7 @@ const helper = {
         let n = books.map( book => {
 
             return {
+                id: book._id,
                 title: book.title,
                 description: book.description,
                 image: book.image.replace("public", req.protocol + '://' + req.get('host'))

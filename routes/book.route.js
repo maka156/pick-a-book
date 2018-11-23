@@ -19,7 +19,7 @@ router.post('/create', upload.single('book'), book_controller.book_create);
 /**
  * PUT requests
  */
-router.put('/:id/update', book_controller.book_update);
+router.put('/:id/update', upload.single('book'),book_controller.book_update);
 
 /**
  * DELETE requests
