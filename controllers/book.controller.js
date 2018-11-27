@@ -53,6 +53,7 @@ exports.book_create = (req, res, next) => {
 };
 
 exports.book_update = (req, res, next) => {
+  console.log(req)
   req.body.image = req.file.path
 
   Book.findByIdAndUpdate(req.params.id, {$set: req.body}, err => {
@@ -69,6 +70,8 @@ exports.book_update = (req, res, next) => {
 exports.book_delete = (req, res, next) => {
   Book.findByIdAndRemove(req.params.id, err => {
     if (err) return next(err)
-    res.send('Deleted successfully!')
+    res.status(204).send({
+      success: true
+    })
   })
 }
