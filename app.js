@@ -6,7 +6,7 @@ const books = require('./routes/book.route');
 const app = express();
 
 // extrae a un db.js
-mongoose.connect('mongodb://localhost/pickabook', {useNewUrlParser: true}, err=> {
+mongoose.connect('mongodb://mongo:27017/pickabook', {useNewUrlParser: true}, err=> {
   if (err) return console.log('error ' + err);
   console.log('DB connection established');
 });

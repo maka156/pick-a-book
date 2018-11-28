@@ -4,6 +4,7 @@
   "description": "Pick a Book Project",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,6 +17,9 @@
     "url": "https://github.com/maka156/pick-a-book/issues"
   },
   "homepage": "https://github.com/maka156/pick-a-book#readme",
+  "engine": {
+    "node": ">=8"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
