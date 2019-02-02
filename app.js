@@ -26,6 +26,16 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', books);
 
+// Handle for a 404
+app.use(function(req, res, next) {
+  return res.status(404).send({ message: 'Route'+req.url+' Not found.' });
+});
+
+// Handle for a 500
+app.use(function(err, req, res, next) {
+  return res.status(500).send({ error: err });
+});
+
 app.listen(port, err => {
   if (err) return console.log('Unable to start the server');
   console.log('Server is up and running on port number ' + port);
